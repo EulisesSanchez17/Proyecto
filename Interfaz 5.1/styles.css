@@ -1,0 +1,117 @@
+/* Estilo base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para el encabezado */
+header {
+    width: 100%;
+    background-color: #313132;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones en el encabezado */
+.buttons {
+    display: flex;
+    align-items: center; /* Alinear botones verticalmente */
+}
+
+.buttons button {
+    background-color: #b7bfc2;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #21a8d5;
+}
+
+/* Crear espacio entre botones */
+.button-space {
+    width: 20px; /* Ajusta el ancho según sea necesario */
+}
+
+/* Estilos para el contenedor principal */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.solicitudes-list {
+    margin-top: 20px;
+}
+
+.solicitud {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+}
+
+.solicitud .info {
+    margin-bottom: 10px;
+}
+
+.solicitud h3 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+.solicitud p {
+    margin: 5px 0;
+}
+
+.acciones {
+    text-align: right;
+}
+
+.btn-aprobar, .btn-rechazar {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn-aprobar {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-rechazar {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.btn-aprobar:hover, .btn-rechazar:hover {
+    opacity: 0.9;
+}
+
+body {
+    background-image: url('LogoUleam.png'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta a tu imagen */
+    background-size: cover; /* La imagen se ajustará al tamaño del contenedor */
+    background-repeat: no-repeat; /* La imagen no se repetirá */
+}

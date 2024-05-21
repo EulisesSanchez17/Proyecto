@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitud de Becas - ULEAM</title>
+  <link rel="stylesheet" href="stylos.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <button id="postular">Postular</button>
+      <button id="consulta-becas">Consulta de Becas</button>
+      <button id="salir">Salir</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="application-section" id="application-section">
+      <h2>Formulario de Solicitud de Beca</h2>
+      <!-- Formulario de solicitud de beca -->
+      <form id="scholarship-form">
+        <!-- Selección del tipo de beca o ayuda económica -->
+        <div class="form-group">
+          <label for="tipo_beca">Tipo de Beca o Ayuda Económica:</label>
+          <select id="tipo_beca" name="tipo_beca" required>
+            <option value="merito">Beca por Mérito</option>
+            <option value="necesidad">Beca por Necesidad Económica</option>
+            <option value="deportiva">Beca Deportiva</option>
+            <option value="cultural">Beca Cultural</option>
+          </select>
+        </div>
+        <!-- Selección del período académico -->
+        <div class="form-group">
+          <label for="periodo_academico">Período Académico:</label>
+          <select id="periodo_academico" name="periodo_academico" required>
+            <option value="2024A">2024 - Primer Semestre</option>
+            <option value="2024B">2024 - Segundo Semestre</option>
+            <option value="2025A">2025 - Primer Semestre</option>
+            <option value="2025B">2025 - Segundo Semestre</option>
+          </select>
+        </div>
+        <!-- Selección de la fecha de elaboración -->
+        <div class="form-group">
+          <label for="fecha_elaboracion">Fecha de Elaboración:</label>
+          <input type="date" id="fecha_elaboracion" name="fecha_elaboracion" required>
+        </div>
+        <!-- Botón para enviar el formulario -->
+        <button type="submit">Enviar Solicitud</button>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('postular').addEventListener('click', function() {
+      alert('Redirigiendo a la página de postulación');
+    });
+
+    document.getElementById('consulta-becas').addEventListener('click', function() {
+      alert('Redirigiendo a la página de consulta de becas');
+    });
+
+    document.getElementById('salir').addEventListener('click', function() {
+      alert('Sesión cerrada');
+    });
+  </script>
+</body>
+</html>

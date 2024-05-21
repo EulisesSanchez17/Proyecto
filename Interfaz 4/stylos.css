@@ -1,0 +1,121 @@
+/* Estilo base para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+/* Estilos para el encabezado */
+header {
+    width: 100%;
+    background-color: #313132;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los botones en el encabezado */
+.buttons {
+    display: flex;
+    align-items: center; /* Alinear botones verticalmente */
+}
+
+.buttons button {
+    background-color: #b7bfc2;
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #21a8d5;
+}
+
+/* Crear espacio entre botones */
+.button-space {
+    width: 20px; /* Ajusta el ancho según sea necesario */
+}
+
+/* Estilos para el contenedor principal */
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección de consulta */
+.consulta-section {
+    margin-bottom: 20px;
+}
+
+h2, h3 {
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilos para las tablas de consulta */
+.consulta-table {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #3498db;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #3498db;
+    color: white;
+}
+
+body {
+    background-image: url('LogoUleam.png'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta a tu imagen */
+    background-size: cover; /* La imagen se ajustará al tamaño del contenedor */
+    background-repeat: no-repeat; /* La imagen no se repetirá */
+}
+
+/* Estilos para los botones en la tabla */
+button.ingresar-button, button.download-button, button.upload-button {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.ingresar-button:hover, button.download-button:hover, button.upload-button:hover {
+    background-color: #2980b9;
+}

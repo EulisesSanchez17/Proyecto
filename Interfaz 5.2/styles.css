@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #ffffff;
+}
+
+header {
+    width: 100%;
+    background-color: #313132;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 50px;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons button {
+    background-color: #b7bfc2;
+    border: none;
+    color: #000000;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: #21a8d5;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #555555;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-section .form-group {
+    flex: 1 1 50%; /* 2 columnas en dispositivos grandes */
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.form-section .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-section .form-group input[type="text"],
+.form-section .form-group input[type="number"],
+.form-section .form-group input[type="date"],
+.form-section .form-group select,
+.form-section .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: #777777;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.form-section .form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-section .form-group textarea {
+    resize: vertical;
+    height: 100px;
+}
+
+.form-group button[type="submit"] {
+    background-color: #1abc9c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.form-group button[type="submit"]:hover {
+    background-color: #118e7d;
+}
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px; /* Ajusta el espacio entre los botones y el logo */
+  }
+  
+  .buttons button {
+    margin-right: 10px; /* Ajusta la separación entre los botones */
+  }
+  body {
+    background-image: url('LogoUleam.png'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta a tu imagen */
+    background-size: cover; /* La imagen se ajustará al tamaño del contenedor */
+    background-repeat: no-repeat; /* La imagen no se repetirá */
+  }

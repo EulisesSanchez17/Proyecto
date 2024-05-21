@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Becas - Universidad</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <button id="postular">Postular</button>
+      <button id="consulta-becas">Consulta de Becas</button> <!-- Nuevo botón -->
+      <button id="salir">Salir</button>
+    </div>
+   
+  </header>
+
+  <main>
+    <h1>Bienvenido a la Plataforma de Solicitud de Becas</h1>
+    <p>Utilice el botón "Postular" para comenzar su solicitud de beca.</p>
+  </main>
+
+  <script>
+   
+
+    // Asignar los datos del usuario al elemento de la interfaz
+    document.getElementById('user-info').textContent = `${nombre} - ${cedula}`;
+
+    // Funcionalidad del botón salir
+    document.getElementById('salir').addEventListener('click', function() {
+      alert('Sesión cerrada');
+      // Aquí puedes añadir la lógica para cerrar la sesión, redirigir a la página de login, etc.
+    });
+
+    // Funcionalidad del botón postular
+    document.getElementById('postular').addEventListener('click', function() {
+      alert('Redirigiendo a la página de postulación');
+      // Aquí puedes añadir la lógica para redirigir a la página de postulación, etc.
+    });
+
+    // Funcionalidad del botón consulta de becas
+    document.getElementById('consulta-becas').addEventListener('click', function() {
+      alert('Redirigiendo a la página de consulta de becas');
+      // Aquí puedes añadir la lógica para redirigir a la página de consulta de becas, etc.
+    });
+  </script>
+</body>
+</html>

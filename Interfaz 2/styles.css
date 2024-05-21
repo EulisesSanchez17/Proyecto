@@ -1,0 +1,70 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+header {
+  width: 100%;
+  background-color: #313132;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+  display: flex;
+  gap: 10px;
+}
+
+.header-left button {
+  background-color: #b7bfc2;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.header-left button:hover {
+  background-color: #21a8d5;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+p {
+  font-size: 18px;
+  color: #666;
+}
+body {
+  background-image: url('LogoUleam.png'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta a tu imagen */
+  background-size: cover; /* La imagen se ajustará al tamaño del contenedor */
+  background-repeat: no-repeat; /* La imagen no se repetirá */
+}

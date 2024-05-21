@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Becas - ULEAM</title>
+  <link rel="stylesheet" href="stylos.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="buttons">
+      <button id="back-button">Volver</button>
+      <span class="button-space"></span> <!-- Espacio entre botones -->
+      <button id="logout-button">Salir</button>
+    </div>
+  </header>
+
+  <!-- Sección principal de consulta -->
+  <main>
+    <section class="consulta-section">
+      <h2>Consulta de Becas</h2>
+      <!-- Tabla de estado de solicitudes de becas -->
+      <div class="consulta-table">
+        <h3>Estado de Solicitudes</h3>
+        <table id="solicitudes-table">
+          <thead>
+            <tr>
+              <th>Formulario</th>
+              <th>ID Solicitud</th>
+              <th>Tipo de Beca</th>
+              <th>Período Académico</th>
+              <th>Estado</th>
+              <th>Descargar Documentos</th>
+              <th>Cargar Documento</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Aquí se insertarán las solicitudes de becas -->
+            <tr>
+              <td><button class="ingresar-button">Ingresar</button></td>
+              <td>001</td>
+              <td>Mérito</td>
+              <td>2024A</td>
+              <td>Aprobada</td>
+              <td><button class="download-button" onclick="downloadFile()">Descargar</button></td>
+              <td>
+                <input type="file" id="file-upload-001" style="display:none" onchange="uploadFile(event)">
+                <button class="upload-button" onclick="document.getElementById('file-upload-001').click()">Subir</button>
+              </td>
+            </tr>
+            <!-- Añadir más filas según sea necesario -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Universidad Laica Eloy Alfaro de Manabí &copy; 2024</p>
+  </footer>
+
+  <script>
+    // Simulación de descarga de archivos
+    function downloadFile() {
+      const link = document.createElement('a');
+      link.href = 'ruta/al/archivo.pdf'; // Ruta al archivo que se quiere descargar
+      link.download = 'Documento.pdf';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    // Simulación de carga de archivos
+    function uploadFile(event) {
+      const file = event.target.files[0];
+      if (file) {
+        alert(`Archivo ${file.name} cargado con éxito.`);
+        // Aquí puedes agregar el código para enviar el archivo a un servidor
+      }
+    }
+  </script>
+</body>
+</html>

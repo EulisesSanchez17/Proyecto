@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Solicitudes de Becas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="buttons">
+      <button id="volver-button">Volver</button>
+      <div class="button-space"></div>
+      <button id="logout-button">Salir</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Gestión de Solicitudes de Becas</h2>
+    <div class="solicitudes-list">
+      <div class="solicitud">
+        <div class="info">
+          <h3>Nom
+            bre del Estudiante</h3>
+          <p>Correo Electrónico: estudiante@correo.com</p>
+          <p>Tipo de Beca: Beca de Mérito</p>
+          <p>Estado: Pendiente</p>
+        </div>
+        <div class="acciones">
+          <button class="btn-aprobar">Aprobar</button>
+          <button class="btn-rechazar">Rechazar</button>
+        </div>
+        <div class="descarga">
+          <a href="ruta/al/archivo_del_estudiante.pdf" class="btn-descargar" download>Descargar Archivo</a>
+        </div>
+      </div>
+      <!-- Otras solicitudes de becas se agregarían aquí -->
+    </div>
+  </div>
+</body>
+</html>

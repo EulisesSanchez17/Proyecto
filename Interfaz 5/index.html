@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de Becas - ULEAM</title>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+<body>
+  <!-- Encabezado -->
+  <header>
+    <div class="header-left">
+      <button id="manage-scholarships-button">Gestionar Becas</button>
+      <button id="logout-button">Salir</button>
+    </div>
+  </header>
+
+  <!-- Sección principal -->
+  <main>
+    <section id="users-section" class="hidden">
+      <h2>Usuarios Registrados</h2>
+      <table id="users-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Correo Electrónico</th>
+            <th>Tipo de Usuario</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán los usuarios registrados -->
+        </tbody>
+      </table>
+    </section>
+    
+    <section id="scholarships-section" class="hidden">
+      <h2>Solicitudes de Becas</h2>
+      <table id="scholarships-table">
+        <thead>
+          <tr>
+            <th>ID Solicitud</th>
+            <th>Nombre del Estudiante</th>
+            <th>Tipo de Beca</th>
+            <th>Período Académico</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Aquí se insertarán las solicitudes de becas -->
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Mensaje de bienvenida -->
+    <section id="welcome-section">
+      <p>Bienvenido, Administrador. Aquí puede gestionar usuarios y becas.</p>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>Universidad Laica Eloy Alfaro de Manabí &copy; 2024</p>
+  </footer>
+
+  <script src="admin_script.js"></script>
+</body>
+</html>

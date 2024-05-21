@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <img src="LogoUleam.png" alt="Uleam" width="300" height="200">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso de Usuarios - Uleam</title>
+    <link rel="stylesheet" href="stylos.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Acceda con su correo institucional</h1>
+        <form id="loginForm">
+            <label for="email">usuario:</label>
+            <input type="email" id="email" name="email" placeholder="usuario@uleam.edu.ec" required>
+            
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" minlength="8" required>
+            
+            <label for="userType">Tipo de usuario:</label>
+            <select id="userType" name="userType" required>
+                <option value="">Seleccione una opción</option>
+                <option value="student">Estudiante</option>
+                <option value="admin">Administrador</option>
+            </select>
+            
+            <button type="submit">Ingresar</button>
+        </form>
+        <div id="message"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  
+  

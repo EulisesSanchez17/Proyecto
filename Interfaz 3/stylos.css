@@ -1,0 +1,107 @@
+/* Estilo base para el cuerpo */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+/* Estilos para el encabezado */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:#313132;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Estilos para el lado izquierdo del encabezado */
+.header-left {
+  display: flex;
+  gap: 10px;
+}
+
+.header-left button {
+  background-color: #b7bfc2;
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.header-left button:hover {
+  background-color: #21a8d5;
+}
+
+/* Estilos para el contenedor principal */
+main {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la sección del formulario de solicitud */
+.application-section {
+  margin-bottom: 20px;
+}
+
+/* Estilos para los encabezados */
+h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los grupos de campo en el formulario */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Estilos para las etiquetas de los campos */
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+/* Estilos para los campos de entrada y selección */
+input[type="text"], input[type="email"], input[type="file"], input[type="date"], select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Estilos para el enfoque de los campos de entrada */
+input:focus, select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+/* Estilos para el botón de envío del formulario */
+button[type="submit"] {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+
+body {
+  background-image: url('LogoUleam.png'); /* Reemplaza 'LogoUleam.png' con la ruta a tu imagen */
+  background-size: cover; /* La imagen se ajustará al tamaño del contenedor */
+  background-repeat: no-repeat; /* La imagen no se repetirá */
+}

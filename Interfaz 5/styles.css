@@ -1,0 +1,108 @@
+/* Estilo base para el cuerpo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Estilos para la barra de navegación */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #313132;
+    padding: 10px 20px;
+    color: white;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left button {
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b7bfc2;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.header-left button:hover {
+    background-color: #21a8d5;
+}
+
+/* Estilos para el contenedor principal */
+main {
+    width: 100%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para las secciones */
+.hidden {
+    display: none;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+thead {
+    background-color: #3498db;
+    color: white;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Estilos para el mensaje de bienvenida */
+#welcome-section {
+    text-align: center;
+    margin: 40px 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Estilos para el pie de página */
+footer {
+    text-align: left;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+  body {
+    background-image: url('LogoUleam.png'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta a tu imagen */
+    background-size: cover; /* La imagen se ajustará al tamaño del contenedor */
+    background-repeat: no-repeat; /* La imagen no se repetirá */
+  }
+    

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Postulación a Becas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="buttons">
+      <button id="volver-button">Volver</button>
+      <button id="logout-button">Salir</button>
+    </div>
+  </header>
+
+  <h2>Formulario de Postulación a Becas</h2>
+  <form id="beca-form">
+    <!-- Sección de tipo de beca y fecha -->
+    <div class="form-section">
+      <div class="form-group">
+        <label for="tipo-beca">Tipo de Beca o Ayuda Económica:</label>
+        <select id="tipo-beca" name="tipo-beca" required>
+          <option value="">Seleccione</option>
+          <option value="merito">Beca por Mérito</option>
+          <option value="necesidad">Beca por Necesidad Económica</option>
+          <option value="deportiva">Beca Deportiva</option>
+          <option value="cultural">Beca Cultural</option>
+        </select>
+        <span class="error-message" id="tipo-beca-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="fecha-elaboracion">Fecha de Elaboración:</label>
+        <input type="date" id="fecha-elaboracion" name="fecha-elaboracion" required>
+        <span class="error-message" id="fecha-elaboracion-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="promedio-periodos">Promedio de los Dos Períodos Anteriores:</label>
+        <input type="number" step="0.01" id="promedio-periodos" name="promedio-periodos" required>
+        <span class="error-message" id="promedio-periodos-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="periodo-academico">Periodo Académico:</label>
+        <select id="periodo-academico" name="periodo-academico" required>
+          <option value="">Seleccione</option>
+          <option value="2024 primer periodo">2024 Primer Periodo</option>
+          <option value="2024 segundo periodo">2024 Segundo Periodo</option>
+          <option value="2025 primer periodo">2025 Primer Periodo</option>
+          <option value="2025 segundo periodo">2025 Segundo Periodo</option>
+        </select>
+        <span class="error-message" id="periodo-academico-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de datos personales -->
+    <h3>Datos Personales del Postulante</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="tipo-documento">Tipo de Documento de Identificación:</label>
+        <select id="tipo-documento" name="tipo-documento" required>
+          <option value="">Seleccione</option>
+          <option value="dni">DNI</option>
+          <option value="pasaporte">Pasaporte</option>
+        </select>
+        <span class="error-message" id="tipo-documento-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="foto">Suba su Fotografía:</label>
+        <input type="file" id="foto" name="foto" accept="image/*" onchange="previewImage(event)" required>
+        <img id="foto-preview" src="#" alt="Vista previa de la foto" style="display: none;">
+        <span class="error-message" id="foto-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+        <span class="error-message" id="apellidos-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" name="edad" required>
+        <span class="error-message" id="edad-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+          <option value="">Seleccione</option>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+        </select>
+        <span class="error-message" id="sexo-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="direccion">Dirección de Residencia:</label>
+        <input type="text" id="direccion" name="direccion" required>
+        <span class="error-message" id="direccion-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de datos bancarios -->
+    <h3>Datos Bancarios del Postulante</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="banco">Banco:</label>
+        <input type="text" id="banco" name="banco" required>
+        <span class="error-message" id="banco-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="numero-cuenta">Número de Cuenta:</label>
+        <input type="text" id="numero-cuenta" name="numero-cuenta" required>
+        <span class="error-message" id="numero-cuenta-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="tipo-cuenta">Tipo de Cuenta:</label>
+        <select id="tipo-cuenta" name="tipo-cuenta" required>
+          <option value="">Seleccione</option>
+          <option value="ahorros">Ahorros</option>
+          <option value="corriente">Corriente</option>
+        </select>
+        <span class="error-message" id="tipo-cuenta-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de colegio de procedencia -->
+    <h3>Colegio de Procedencia</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="colegio">Nombre del Colegio:</label>
+        <input type="text" id="colegio" name="colegio" required>
+        <span class="error-message" id="colegio-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="ciudad-colegio">Ciudad del Colegio:</label>
+        <input type="text" id="ciudad-colegio" name="ciudad-colegio" required>
+        <span class="error-message" id="ciudad-colegio-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de ingresos -->
+    <h3>Ingresos del Postulante</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="ingreso-personal">Ingreso Personal:</label>
+        <input type="number" step="0.01" id="ingreso-personal" name="ingreso-personal" required>
+        <span class="error-message" id="ingreso-personal-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="ingreso-familiar">Ingreso Familiar:</label>
+        <input type="number" step="0.01" id="ingreso-familiar" name="ingreso-familiar" required>
+        <span class="error-message" id="ingreso-familiar-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de trabajo -->
+    <h3>Situación Laboral</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="trabaja">¿Trabaja?</label>
+        <select id="trabaja" name="trabaja" required onchange="toggleTrabajo()">
+          <option value="">Seleccione</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+        <span class="error-message" id="trabaja-error"></span>
+      </div>
+      <div class="form-group" id="trabajo-detalles" style="display: none;">
+        <label for="tipo-trabajo">Tipo de Trabajo:</label>
+        <input type="text" id="tipo-trabajo" name="tipo-trabajo">
+        <span class="error-message" id="tipo-trabajo-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de patrimonio -->
+    <h3>Patrimonio del Postulante</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="propiedades">¿Tiene propiedades?</label>
+        <select id="propiedades" name="propiedades" required>
+          <option value="">Seleccione</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+        <span class="error-message" id="propiedades-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="vehiculos">¿Tiene vehículos?</label>
+        <select id="vehiculos" name="vehiculos" required>
+          <option value="">Seleccione</option>
+          <option value="si">Sí</option>
+          <option value="no">No</option>
+        </select>
+        <span class="error-message" id="vehiculos-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de composición familiar -->
+    <h3>Composición Familiar</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="num-miembros-familia">Número de Miembros en la Familia:</label>
+        <input type="number" id="num-miembros-familia" name="num-miembros-familia" required>
+        <span class="error-message" id="num-miembros-familia-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="num-dependientes">Número de Dependientes:</label>
+        <input type="number" id="num-dependientes" name="num-dependientes" required>
+        <span class="error-message" id="num-dependientes-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de situación económica -->
+    <h3>Situación Económica</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="descripcion-economica">Descripción de la Situación Económica:</label>
+        <textarea id="descripcion-economica" name="descripcion-economica" rows="4" required></textarea>
+        <span class="error-message" id="descripcion-economica-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de referencias -->
+    <h3>Referencias</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="referencia1-nombre">Nombre de la Primera Referencia:</label>
+        <input type="text" id="referencia1-nombre" name="referencia1-nombre" required>
+        <span class="error-message" id="referencia1-nombre-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="referencia1-telefono">Teléfono de la Primera Referencia:</label>
+        <input type="tel" id="referencia1-telefono" name="referencia1-telefono" required>
+        <span class="error-message" id="referencia1-telefono-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="referencia2-nombre">Nombre de la Segunda Referencia:</label>
+        <input type="text" id="referencia2-nombre" name="referencia2-nombre" required>
+        <span class="error-message" id="referencia2-nombre-error"></span>
+      </div>
+      <div class="form-group">
+        <label for="referencia2-telefono">Teléfono de la Segunda Referencia:</label>
+        <input type="tel" id="referencia2-telefono" name="referencia2-telefono" required>
+        <span class="error-message" id="referencia2-telefono-error"></span>
+      </div>
+    </div>
+
+    <!-- Sección de comentarios -->
+    <h3>Comentarios Adicionales</h3>
+    <div class="form-section">
+      <div class="form-group">
+        <label for="comentarios">Comentarios Adicionales:</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+        <span class="error-message" id="comentarios-error"></span>
+      </div>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+
+  <script src="java.js"></script>
+</body>
+</html>

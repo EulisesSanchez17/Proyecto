@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 0px;
+  border: 3px solid black;
+  box-shadow: 0 0 10px rgb(1, 1, 1);
+  max-width: 400px;
+  width:100%;
+  color: white;
+  
+}
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 10px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #241ba4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #2b00ff;
+}
+
+#message {
+  margin-top: 10px;
+  text-align: center;
+  color: red;
+}
+body {
+  background-image: url('LogoUleam.png'); /* Reemplaza 'ruta/a/imagen.jpg' con la ruta a tu imagen */
+  background-size: cover; /* La imagen se ajustará al tamaño del contenedor */
+  background-repeat: no-repeat; /* La imagen no se repetirá */
+}
+img{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
